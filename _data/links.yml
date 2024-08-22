@@ -1,0 +1,138 @@
+- name: Visit our Website
+  url: https://stellarvector.be/
+  button: sv
+  icon: stellarvector.png
+  icon_alt: Stellar Vector Logo
+- name: Join our Discord server!
+  url: https://discord.gg/tbP75TNfNR
+  button: discord
+  icon: discord.svg
+  icon_alt: Discord Logo
+- name: Join our Mailing List
+  url: https://groups.google.com/a/stellarvector.be/g/ctf
+  button: sv
+  icon: google-groups.png
+  icon_alt: Google Groups Logo
+- name: Visit our Blog
+  url: https://blog.stellarvector.be/
+  button: sv
+  icon: stellarvector.png
+  icon_alt: Stellar Vector Logo
+- name: CTFTime
+  url: https://www.ctftime.org/team/192988
+  button: sv
+  icon: ctftime.png
+  icon_alt: CTFTime Logo
+- name: Hack The Box
+  url: https://app.hackthebox.com/teams/overview/4886
+  button: sv
+  icon: htb.svg
+  icon_alt: Hack The Box Logo
+- name: Practice hacking
+  url: https://play.stellarvector.be/
+  button: sv
+  icon: stellarvector.png
+  icon_alt: Stellar Vector Logo
+- name: Github
+  url: https://github.com/stellarvector
+  button: github
+  icon: github.svg
+  icon_alt: GitHub Logo
+- name: Dockerhub
+  url: https://hub.docker.com/u/stellarvector
+  button: sv
+  icon: dockerhub.png
+  icon_alt: DockerHub Logo
+- name: X
+  url: https://x.com/stellar_vector
+  button: x
+  icon: x.svg
+  icon_alt: X Logo
+- name: LinkedIn
+  url: https://www.linkedin.com/company/stellarvector
+  button: linked
+  icon: linkedin.svg
+  icon_alt: LinkedIn Logo
+- name: Instagram
+  url: https://www.instagram.com/stellar.vector/
+  button: instagram
+  icon: instagram.svg
+  icon_alt: Instagram Logo
+- name: Facebook
+  url: https://www.facebook.com/stellarvector.be/
+  button: faceb
+  icon: facebook.svg
+  icon_alt: Facebook Logo
+- name: Electronic mail
+  url: "mailto:team@stellarvector.be"
+  button: sv
+  icon: generic-email-alt.svg
+  icon_alt: Email Icon
+- name: Our calendar
+  url: https://www.stellarvector.be/calendar
+  button: sv
+  icon: generic-calendar.svg
+  icon_alt: Calendar Icon
+- name: Route to our HQ
+  url: https://www.google.com/maps/dir//Celestijnenlaan+200A,+Leuven/@50.8642433,4.6375575,13z/data=!4m8!4m7!1m0!1m5!1m1!1s0x47c16110fdaa4483:0xa0e21d4a20cbf0db!2m2!1d4.6787569!2d50.8641964
+  button: sv
+  icon: generic-map.svg
+  icon_alt: Route location
+
+# button-apple-podcasts
+#   apple-podcasts.svg Apple Podcasts Logo
+# button-apple-podcasts-alt
+#   apple-podcasts-alt.svg" alt="Apple Podcasts Logo
+# button-messenger
+#   images/icons/messenger.svg" alt="Messenger Logo
+# button-fiverr
+#   images/icons/fiverr.svg" alt="Fiverr Logo
+# button-gitlab
+#   images/icons/gitlab.svg" alt="GitLab Logo
+# button-google-black
+#   images/icons/google-drive.svg" alt="Google Drive Logo
+# button-playstore
+#   images/icons/google-play.svg" alt="Google Play Store Logo
+# button-kick
+#   images/icons/kick.svg" alt="Kick Logo
+# button-kick-alt
+#   images/icons/kick-alt.svg" alt="Kick Logo
+# button-kit
+#   images/icons/kit.svg" alt="Kit Logo
+# button-mailchimp
+#   images/icons/mailchimp.svg" alt="Mailchimp Logo
+# button-mastodon
+#   images/icons/mastodon.svg" alt="Mastodon Logo
+# button-pinterest
+#   images/icons/pinterest.svg" alt="Pinterest Logo
+# button-spotify
+#   images/icons/spotify.svg" alt="Spotify Logo
+# button-spotify-alt
+#   images/icons/spotify-alt.svg" alt="Spotify Logo
+# button-threads
+#   images/icons/threads.svg" alt="Threads Logo
+# button-tiktok
+#   images/icons/tiktok.svg" alt="TikTok Logo
+# button-twitch
+#   images/icons/twitch.svg" alt="Twitch Logo
+# button-vimeo
+#   images/icons/vimeo.svg" alt="Vimeo Logo
+# button-yt
+#   images/icons/youtube.svg" alt="YouTube Logo
+# button-default
+#   images/icons/generic-blog.svg" alt="Blog Icon
+#   images/icons/generic-calendar.svg" alt="Calendar Icon
+#   images/icons/generic-cloud.svg" alt="Cloud Icon
+#   images/icons/generic-code.svg" alt="Code Icon
+#   images/icons/generic-computer.svg" alt="Computer Icon
+#   images/icons/generic-email.svg" alt="Email Icon
+#   images/icons/generic-email-alt.svg" alt="Email Icon
+#   images/icons/generic-homepage.svg" alt="Homepage Icon
+#   images/icons/generic-map.svg" alt="Map Icon
+#   images/icons/generic-phone.svg" alt="Phone Icon
+#   images/icons/generic-review.svg" alt="Review Icon
+#   images/icons/generic-rss.svg" alt="RSS Icon
+#   images/icons/generic-shopping-bag.svg" alt="Shopping Bag Icon
+#   images/icons/generic-shopping-tag.svg" alt="Shopping Tag Icon
+#   images/icons/generic-sms.svg" alt="SMS Icon
+#   images/icons/generic-website.svg" alt="Website Icon
