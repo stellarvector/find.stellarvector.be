@@ -1,0 +1,20 @@
+- name: X
+  url: https://x.com/stellar_vector
+  button: x
+  icon: images/icons/x.svg
+  icon_alt: X Logo
+- name: LinkedIn
+  url: https://www.linkedin.com/company/stellarvector
+  button: linked
+  icon: images/icons/linkedin.svg
+  icon_alt: LinkedIn Logo
+- name: Instagram
+  url: https://www.instagram.com/stellar.vector/
+  button: instagram
+  icon: images/icons/instagram.svg
+  icon_alt: Instagram Logo
+- name: Facebook
+  url: https://www.facebook.com/stellarvector.be/
+  button: faceb
+  icon: images/icons/facebook.svg
+  icon_alt: Facebook Logo

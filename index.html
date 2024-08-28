@@ -9,36 +9,37 @@
   <meta name="description" content="{{ site.description }}">
   <meta name="author" content="Stellar Vector">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/skeleton-auto.css">
-    <link rel="stylesheet" href="css/brands.css">
-  <link rel="icon" type="image/png" href="images/stellarvector.png">
+  <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/skeleton-auto.css">
+    <link rel="stylesheet" href="/css/brands.css">
+  <link rel="icon" type="image/png" href="https://www.stellarvector.be/assets/branding/logo/icon-star.ico">
   <style>
-    .button.button-sv{color: #ffffff;background-color: {{ site.primary_color }};}
+    .button.button-sv{color: #ffffff;background-color: {{ site.primary_color }}49;}
     .button.button-sv:hover,.button.button-sv:focus{filter: brightness(90%);}
+
+    .button.button-google-groups{color: #ffffff;background-color: #4285f429;}
+    .button.button-google-groups:hover,.button.button-google-groups:focus{filter: brightness(90%);}
+
+    .button.button-htb{color: #ffffff;background-color: #9fef0029;}
+    .button.button-htb:hover,.button.button-htb:focus{filter: brightness(90%);}
+
+    .button.button-dockerhub{color: #ffffff;background-color: #25435649;}
+    .button.button-dockerhub:hover,.button.button-dockerhub:focus{filter: brightness(90%);}
   </style>
 </head>
 <body>
   <div class="container">
     <div class="row">
       <div class="column" style="margin-top: 10%">
-        <img src="images/stellarvector-128.png" class="avatar" srcset="images/stellarvector-128.png 2x" alt="Stellar Vector Logo">
+        <img src="https://www.stellarvector.be/assets/branding/logo/circle-dark.svg" class="avatar" alt="Stellar Vector Logo">
         <h1 role="heading">{{ site.title }}</h1>
-        {% for link in site.data.links %}
-          <a class="button button-{{ link.button }}"
-              href="{{ link.url }}"
-              target="_blank"
-              rel="noopener"
-              role="button">
-              {% if link.icon %}
-                <img class="icon"
-                    aria-hidden="true"
-                    src="images/icons/{{ link.icon }}"
-                    alt="{{ link.icon_alt }}">
-              {% endif %}
-              {{ link.name }}
-          </a><br>
-        {% endfor %}
+        {% include links.html links=site.data.links.general %}
+        <h2>Hacking</h2>
+        {% include links.html links=site.data.links.hacking %}
+        <h2>Social media</h2>
+        {% include links.html links=site.data.links.social %}
+        <h2>Other places to find us</h2>
+        {% include links.html links=site.data.links.other %}
         <p><small style="color: #555">Adapted from <a href="https://littlelink.io" target="_blank" rel="noopener" role="button" style="color: #555">LittleLink</a>.</small></p>
       </div>
     </div>

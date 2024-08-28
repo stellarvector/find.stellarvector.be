@@ -46,8 +46,8 @@ button {
   outline: none;
   border-radius: 8px;
   cursor: pointer;
-  
-}     
+
+}
 button:hover,
 .button:focus {
   color: #212121;
@@ -291,7 +291,7 @@ button:hover,
 /* Discord */
 .button.button-discord {
   color: #ffffff;
-  background-color: #161CBB;
+  background-color: #161CBB49;
 }
 .button.button-discord:hover,
 .button.button-discord:focus {
@@ -322,7 +322,7 @@ button:hover,
 /* Facebook */
 .button.button-faceb {
   color: #ffffff;
-  background-color: #1877f2;
+  background-color: #1877f249;
 }
 .button.button-faceb:hover,
 .button.button-faceb:focus {
@@ -382,8 +382,7 @@ button:hover,
 /* GitHub */
 .button.button-github {
   color: #ffffff;
-  background-color: #000000;
-  border: 1px solid #FFFFFF;
+  background-color: #222222;
 }
 .button.button-github:hover,
 .button.button-github:focus {
@@ -468,7 +467,7 @@ button:hover,
 /* Instagram */
 .button.button-instagram {
   color: #ffffff;
-  background-image: linear-gradient(-135deg, #1400c8, #b900b4, #f50000);
+  background-image: linear-gradient(-135deg, #1400c849, #b900b349, #f5000049);
 }
 .button.button-instagram:hover,
 .button.button-instagram:focus {
@@ -559,7 +558,7 @@ button:hover,
 /* LinkedIn */
 .button.button-linked {
   color: #ffffff;
-  background-color: #2867b2;
+  background-color: #2867b249;
 }
 .button.button-linked:hover,
 .button.button-linked:focus {
@@ -1049,8 +1048,7 @@ button:hover,
 /* X */
 .button.button-x {
   color: #FFFFFF;
-  background-color: #000000;
-  border: 1px solid #FFFFFF;
+  background-color: #222222;
 }
 .button.button-x:hover,
 .button.button-x:focus {

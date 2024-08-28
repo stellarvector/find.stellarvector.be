@@ -1,0 +1,15 @@
+{% for link in include.links %}
+    <a class="button button-{{ link.button }}"
+        href="{{ link.url }}"
+        target="_blank"
+        rel="noopener"
+        role="button">
+        {% if link.icon %}
+        <img class="icon"
+            aria-hidden="true"
+            src="{{ link.icon }}"
+            alt="{{ link.icon_alt }}">
+        {% endif %}
+        {{ link.name }}
+    </a><br>
+{% endfor %}

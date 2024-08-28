@@ -1,83 +1,23 @@
-- name: Visit our Website
-  url: https://stellarvector.be/
-  button: sv
-  icon: stellarvector.png
-  icon_alt: Stellar Vector Logo
-- name: Join our Discord server!
-  url: https://discord.gg/tbP75TNfNR
-  button: discord
-  icon: discord.svg
-  icon_alt: Discord Logo
-- name: Join our Mailing List
-  url: https://groups.google.com/a/stellarvector.be/g/ctf
-  button: sv
-  icon: google-groups.png
-  icon_alt: Google Groups Logo
 - name: Visit our Blog
   url: https://blog.stellarvector.be/
   button: sv
-  icon: stellarvector.png
+  icon: https://www.stellarvector.be/assets/branding/logo/star-only-dark.svg
+  icon_alt: Stellar Vector Logo
+- name: Play Stellar Vector
+  url: https://play.stellarvector.be/
+  button: sv
+  icon: https://www.stellarvector.be/assets/branding/logo/star-only-dark.svg
   icon_alt: Stellar Vector Logo
 - name: CTFTime
   url: https://www.ctftime.org/team/192988
   button: sv
-  icon: ctftime.png
+  icon: images/icons/ctftime.png
   icon_alt: CTFTime Logo
 - name: Hack The Box
   url: https://app.hackthebox.com/teams/overview/4886
-  button: sv
-  icon: htb.svg
+  button: htb
+  icon: images/icons/htb.svg
   icon_alt: Hack The Box Logo
-- name: Practice hacking
-  url: https://play.stellarvector.be/
-  button: sv
-  icon: stellarvector.png
-  icon_alt: Stellar Vector Logo
-- name: Github
-  url: https://github.com/stellarvector
-  button: github
-  icon: github.svg
-  icon_alt: GitHub Logo
-- name: Dockerhub
-  url: https://hub.docker.com/u/stellarvector
-  button: sv
-  icon: dockerhub.png
-  icon_alt: DockerHub Logo
-- name: X
-  url: https://x.com/stellar_vector
-  button: x
-  icon: x.svg
-  icon_alt: X Logo
-- name: LinkedIn
-  url: https://www.linkedin.com/company/stellarvector
-  button: linked
-  icon: linkedin.svg
-  icon_alt: LinkedIn Logo
-- name: Instagram
-  url: https://www.instagram.com/stellar.vector/
-  button: instagram
-  icon: instagram.svg
-  icon_alt: Instagram Logo
-- name: Facebook
-  url: https://www.facebook.com/stellarvector.be/
-  button: faceb
-  icon: facebook.svg
-  icon_alt: Facebook Logo
-- name: Electronic mail
-  url: "mailto:team@stellarvector.be"
-  button: sv
-  icon: generic-email-alt.svg
-  icon_alt: Email Icon
-- name: Our calendar
-  url: https://www.stellarvector.be/calendar
-  button: sv
-  icon: generic-calendar.svg
-  icon_alt: Calendar Icon
-- name: Route to our HQ
-  url: https://www.google.com/maps/dir//Celestijnenlaan+200A,+Leuven/@50.8642433,4.6375575,13z/data=!4m8!4m7!1m0!1m5!1m1!1s0x47c16110fdaa4483:0xa0e21d4a20cbf0db!2m2!1d4.6787569!2d50.8641964
-  button: sv
-  icon: generic-map.svg
-  icon_alt: Route location
 
 # button-apple-podcasts
 #   apple-podcasts.svg Apple Podcasts Logo
