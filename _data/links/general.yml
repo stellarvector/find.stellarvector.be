@@ -1,3 +1,8 @@
+- name: Register for CTF101
+  url: https://go.stellarvector.be/ctf101/signup
+  button: sv
+  icon: https://www.stellarvector.be/assets/branding/logo/star-only-dark.svg
+  icon_alt: Stellar Vector Logo
 - name: Visit our Website
   url: https://stellarvector.be/
   button: sv
