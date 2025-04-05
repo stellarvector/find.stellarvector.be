@@ -128,12 +128,12 @@ a {
   color: #2457F5;
 }
 a:hover {
-  color: #083BDA; 
+  color: #083BDA;
 }
 a:focus {
   outline: #7AB8FF solid 2px;
   border-radius: 2px;
-}         
+}
 
 /* Link Color Dark Theme */
 @media (prefers-color-scheme: dark) {
@@ -218,11 +218,9 @@ hr {
 50% (default): True circle
 */
 .avatar {
-  width: 128px;
-  height: 128px;
+  width: 300px;
   object-fit: cover;
   background-position: center;
-  border-radius: 50%;
 }
 
 /* open-sans-regular - vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic */

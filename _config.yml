@@ -22,10 +22,10 @@ title: Find Stellar Vector
 email: info@stellarvector.be
 description: >- # this means to ignore newlines until "baseurl:"
   You can find Stellar Vector on Social Media and on our own self-hosted systems.
-  Follow the links on this page to get there! 
+  Follow the links on this page to get there!
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://find.stellarvector.be" # the base hostname & protocol for your site, e.g. http://example.com
-primary_color: "#af1e1e"
+primary_color: "#da1f2e"
 
 # Build settings
 theme: minima

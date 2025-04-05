@@ -1,7 +1,7 @@
 - name: Visit our Website
   url: https://stellarvector.be/
   button: sv
-  icon: https://www.stellarvector.be/assets/branding/logo/star-only-dark.svg
+  icon: https://stellarvector.be/assets/logo/star.png
   icon_alt: Stellar Vector Logo
 - name: Join our Discord server!
   url: https://discord.gg/tbP75TNfNR
@@ -14,7 +14,7 @@
   icon: images/icons/google-groups.png
   icon_alt: Google Groups Logo
 - name: Our calendar
-  url: https://www.stellarvector.be/calendar
+  url: https://stellarvector.be/calendar
   button: sv
-  icon: https://www.stellarvector.be/assets/branding/logo/star-only-dark.svg
+  icon: https://stellarvector.be/assets/logo/star.png
   icon_alt: Calendar Icon
