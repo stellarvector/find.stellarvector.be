@@ -1,33 +1,30 @@
 ---
-
 ---
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>404 not found - {{ site.title }}</title>
+  <title>404 - {{ site.title }}</title>
   <meta name="author" content="Stellar Vector">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/skeleton-auto.css">
-    <link rel="stylesheet" href="css/brands.css">
-  <link rel="icon" type="image/png" href="images/stellar-vector.png">
-  <style>
-    html {background-color:#000;}
-    .button.button-sv{color: #ffffff;background-color: {{ site.primary_color }};}
-    .button.button-sv:hover,.button.button-sv:focus{filter: brightness(90%);}
-  </style>
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="icon" type="image/png" href="https://stellarvector.be/assets/logo/favicon.ico">
 </head>
 <body>
   <div class="container">
-    <div class="row">
-      <div class="column" style="margin-top: 10%">
+    <a href="https://stellarvector.be">
         <img src="https://stellarvector.be/assets/logo/logo-dark.png" class="avatar" alt="Stellar Vector Logo">
-        <h1 role="heading">404</h1>
-        <p><b>Page not found :(</b></p>
-        <p>The requested page could not be found.</p>
-      </div>
-    </div>
+    </a>
+    <h1 role="heading">404</h1>
+    <p style="text-align: center;"><b>Page not found :(</b></p>
+    <p style="text-align: center;">The requested page could not be found.</p>
+
+    <a href="/" class="button button-sv">Go back to home</a>
+
+    <footer>
+        <p>Stellar Vector is powered by <br/>the <a href="//distrinet.cs.kuleuven.be">DistriNet research group</a> and the <a href="//kuleuven.be">KU Leuven</a>.</p>
+        <p><a href="https://stellarvector.be">stellarvector.be</a></p>
+    </footer>
   </div>
 </body>
 <script defer data-domain="find.stellarvector.be" src="https://plausible.stellarvector.be/js/script.file-downloads.hash.outbound-links.js"></script>

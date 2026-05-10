@@ -1,5 +1,4 @@
 ---
-
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -9,42 +8,31 @@
   <meta name="description" content="{{ site.description }}">
   <meta name="author" content="Stellar Vector">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="/css/normalize.css">
-    <link rel="stylesheet" href="/css/skeleton-auto.css">
-    <link rel="stylesheet" href="/css/brands.css">
+  <link rel="stylesheet" href="/assets/css/main.css">
   <link rel="icon" type="image/png" href="https://stellarvector.be/assets/logo/favicon.ico">
-  <style>
-    html {background-color:#000;}
-
-    .button.button-sv{color: #ffffff;background-color: {{ site.primary_color }}49;}
-    .button.button-sv:hover,.button.button-sv:focus{filter: brightness(150%);}
-
-    .button.button-google-groups{color: #ffffff;background-color: #4285f429;}
-    .button.button-google-groups:hover,.button.button-google-groups:focus{filter: brightness(150%);}
-
-    .button.button-htb{color: #ffffff;background-color: #9fef0029;}
-    .button.button-htb:hover,.button.button-htb:focus{filter: brightness(150%);}
-
-    .button.button-dockerhub{color: #ffffff;background-color: #25435649;}
-    .button.button-dockerhub:hover,.button.button-dockerhub:focus{filter: brightness(150%);}
-  </style>
 </head>
 <body>
   <div class="container">
-    <div class="row">
-      <div class="column" style="margin-top: 10%">
+    <a href="https://stellarvector.be">
         <img src="https://stellarvector.be/assets/logo/logo-dark.png" class="avatar" alt="Stellar Vector Logo">
-        <h1 role="heading">{{ site.title }}</h1>
-        {% include links.html links=site.data.links.general %}
-        <h2>Hacking</h2>
-        {% include links.html links=site.data.links.hacking %}
-        <h2>Social media</h2>
-        {% include links.html links=site.data.links.social %}
-        <h2>Other places to find us</h2>
-        {% include links.html links=site.data.links.other %}
-        <p><small style="color: #555">Adapted from <a href="https://littlelink.io" target="_blank" rel="noopener" role="button" style="color: #555">LittleLink</a>.</small></p>
-      </div>
-    </div>
+    </a>
+    <h1 role="heading">{{ site.title }}</h1>
+
+    {% include links.html links=site.data.links.general %}
+
+    <h2>Hacking</h2>
+    {% include links.html links=site.data.links.hacking %}
+
+    <h2>Social media</h2>
+    {% include links.html links=site.data.links.social %}
+
+    <h2>Other places to find us</h2>
+    {% include links.html links=site.data.links.other %}
+
+    <footer>
+        <p>Stellar Vector is powered by <br/>the <a href="//distrinet.cs.kuleuven.be">DistriNet research group</a> and the <a href="//kuleuven.be">KU Leuven</a>.</p>
+        <p><a href="https://stellarvector.be">stellarvector.be</a></p>
+    </footer>
   </div>
 </body>
 <script defer data-domain="find.stellarvector.be" src="https://plausible.stellarvector.be/js/script.file-downloads.hash.outbound-links.js"></script>
