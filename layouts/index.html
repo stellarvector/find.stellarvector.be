@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-[#050505] text-[#e0e0e0]">
+<head>
+    <meta charset="utf-8">
+    <title>{{ .Site.Title }}</title>
+    <meta name="description" content="{{ .Site.Params.description }}">
+    <meta name="author" content="Stellar Vector">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    {{ $css := resources.Get "css/main.css" | css.TailwindCSS }}
+    <link rel="stylesheet" href="{{ $css.RelPermalink }}">
+    <link rel="icon" type="image/png" href="https://stellarvector.be/assets/logo/favicon.ico">
+</head>
+<body class="font-sans antialiased">
+    <div class="max-w-[480px] mx-auto py-12 px-4">
+        <a href="https://stellarvector.be">
+            <img src="https://stellarvector.be/assets/logo/logo-dark.png" class="block mx-auto mb-8 h-[100px] w-auto rounded-lg transition-transform duration-300 hover:scale-105" alt="Stellar Vector Logo">
+        </a>
+        <h1 class="text-4xl mb-8 text-center font-bold tracking-tight">{{ .Site.Title }}</h1>
+
+        <div class="space-y-4">
+            {{ range hugo.Data.links.general }}
+                {{ partial "link.html" . }}
+            {{ end }}
+
+            <h2 class="text-2xl mt-12 mb-6 text-center font-bold tracking-tight">Hacking</h2>
+            {{ range hugo.Data.links.hacking }}
+                {{ partial "link.html" . }}
+            {{ end }}
+
+            <h2 class="text-2xl mt-12 mb-6 text-center font-bold tracking-tight">Social media</h2>
+            {{ range hugo.Data.links.social }}
+                {{ partial "link.html" . }}
+            {{ end }}
+
+            <h2 class="text-2xl mt-12 mb-6 text-center font-bold tracking-tight">Other places to find us</h2>
+            {{ range hugo.Data.links.other }}
+                {{ partial "link.html" . }}
+            {{ end }}
+        </div>
+
+        <footer class="mt-20 text-center text-sm text-[#a0a0a0]">
+            <p class="mb-2">Stellar Vector is powered by <br/>the <a href="https://distrinet.cs.kuleuven.be" class="text-[#B21010] font-semibold hover:underline">DistriNet research group</a> and the <a href="https://kuleuven.be" class="text-[#B21010] font-semibold hover:underline">KU Leuven</a>.</p>
+            <p><a href="https://stellarvector.be" class="text-[#B21010] font-semibold hover:underline">stellarvector.be</a></p>
+        </footer>
+    </div>
+</body>
+<script defer data-domain="find.stellarvector.be" src="https://plausible.stellarvector.be/js/script.file-downloads.hash.outbound-links.js"></script>
+</html>

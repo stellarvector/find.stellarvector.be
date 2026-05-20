@@ -1,0 +1,15 @@
+{{ $c := .button | default "sv" }}
+
+<a class="btn-base btn-{{ $c }} group"
+    href="{{ .url }}"
+    target="_blank"
+    rel="noopener"
+    role="button">
+    {{ if .icon }}
+    <img class="h-[1.5em] w-auto transition-transform duration-300 group-hover:scale-110"
+        aria-hidden="true"
+        src="{{ .icon | relURL }}"
+        alt="{{ .icon_alt }}">
+    {{ end }}
+    <span>{{ .name }}</span>
+</a>
