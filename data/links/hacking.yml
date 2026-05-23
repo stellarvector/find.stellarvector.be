@@ -1,12 +1,12 @@
 - name: Visit our Blog
   url: https://blog.stellarvector.be/
   button: sv
-  icon: https://stellarvector.be/assets/logo/star.png
+  icon: https://www.stellarvector.be/assets/logo/star.png
   icon_alt: Stellar Vector Logo
 - name: Play Stellar Vector
   url: https://play.stellarvector.be/
   button: sv
-  icon: https://stellarvector.be/assets/logo/star.png
+  icon: https://www.stellarvector.be/assets/logo/star.png
   icon_alt: Stellar Vector Logo
 - name: CTFTime
   url: https://www.ctftime.org/team/192988

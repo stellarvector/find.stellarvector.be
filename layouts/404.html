@@ -9,10 +9,11 @@
 
     {{ $themeCSS := resources.Get "css/main.css" }}
     {{ $customCSS := resources.Get "css/custom.css" }}
-    {{ $css := slice $themeCSS $customCSS | resources.Concat "css/bundle.css" | css.TailwindCSS }}
+    {{ $opts := dict "minify" true }}
+    {{ $css := slice $themeCSS $customCSS | resources.Concat "css/bundle.css" | css.TailwindCSS $opts }}
 
     <link rel="stylesheet" href="{{ $css.RelPermalink }}">
-    <link rel="icon" type="image/png" href="https://stellarvector.be/assets/logo/favicon.ico">
+    <link rel="icon" type="image/png" href="https://www.stellarvector.be/assets/logo/favicon.ico">
 </head>
 <body class="antialiased flex items-center justify-center min-h-screen">
     <div class="text-center">
@@ -21,4 +22,5 @@
         <a href="/" class="btn-base btn-sv mt-8 uppercase tracking-widest">Find Stellar Vector</a>
     </div>
 </body>
+<script defer data-domain="find.stellarvector.be" src="https://plausible.stellarvector.be/js/script.file-downloads.hash.outbound-links.js"></script>
 </html>
