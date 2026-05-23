@@ -1,20 +1,24 @@
 <!DOCTYPE html>
-<html lang="en" class="bg-[#050505] text-[#e0e0e0]">
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <title>404 Page Not Found | {{ .Site.Title }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    {{ $css := resources.Get "css/main.css" | css.TailwindCSS }}
+
+    {{ $themeCSS := resources.Get "css/main.css" }}
+    {{ $customCSS := resources.Get "css/custom.css" }}
+    {{ $css := slice $themeCSS $customCSS | resources.Concat "css/bundle.css" | css.TailwindCSS }}
+
     <link rel="stylesheet" href="{{ $css.RelPermalink }}">
+    <link rel="icon" type="image/png" href="https://stellarvector.be/assets/logo/favicon.ico">
 </head>
-<body class="font-sans antialiased flex items-center justify-center min-h-screen">
+<body class="antialiased flex items-center justify-center min-h-screen">
     <div class="text-center">
-        <h1 class="text-6xl font-bold mb-4">404</h1>
-        <p class="text-xl mb-8">Page not found.</p>
-        <a href="/" class="text-[#B21010] font-bold hover:underline uppercase tracking-widest">Go Home</a>
+        <h1 class="text-6xl font-bold">404</h1>
+        <p class="text-2xl mt-4">page not found</p>
+        <a href="/" class="btn-base btn-sv mt-8 uppercase tracking-widest">Find Stellar Vector</a>
     </div>
 </body>
 </html>

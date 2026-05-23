@@ -1,0 +1,33 @@
+@custom-variant light (&:where(.light, .light *));
+
+@theme {
+    --color-discord: #5865F2;
+    --color-faceb: #1877F2;
+    --color-github: #ffffff;
+    --color-instagram: #E4405F;
+    --color-linked: #0A66C2;
+    --color-x: #ffffff;
+    --color-yt: #FF0000;
+    --color-htb: #9FEF00;
+    --color-google-groups: #4285F4;
+    --color-dockerhub: #2496ED;
+}
+
+@layer utility {
+    .btn-base {
+        @apply flex items-center justify-center gap-3 uppercase py-3 px-6 rounded-md text-sm font-bold w-full max-w-xs mx-auto transition-all duration-300 border text-body hover:shadow-lg;
+        @apply no-underline;
+    }
+
+    .btn-sv { @apply bg-card border-accent-tint hover:bg-accent-tint hover:border-accent; }
+    .btn-discord { @apply bg-discord/10 border-discord/40 hover:bg-discord/20 hover:border-discord; }
+    .btn-faceb { @apply bg-faceb/10 border-faceb/40 hover:bg-faceb/20 hover:border-faceb; }
+    .btn-github { @apply bg-github/10 border-github/40 hover:bg-github/20 hover:border-github light:bg-gray-200 light:hover:bg-gray-300 light:border-gray-400 light:hover:border-gray-500; }
+    .btn-instagram { @apply bg-instagram/10 border-instagram/40 hover:bg-instagram/20 hover:border-instagram; }
+    .btn-linked { @apply bg-linked/10 border-linked/40 hover:bg-linked/20 hover:border-linked; }
+    .btn-x { @apply bg-x/10 light:bg-gray-200 border-x/40 light:border-gray-400 hover:bg-x/20 light:hover:border-gray-500 hover:border-x light:hover:bg-gray-300; }
+    .btn-yt { @apply bg-yt/10 border-yt/40 hover:bg-yt/20 hover:border-yt; }
+    .btn-htb { @apply bg-htb/10 border-htb/40 hover:bg-htb/20 hover:border-htb; }
+    .btn-google-groups { @apply bg-google-groups/10 border-google-groups/40 hover:bg-google-groups/20 hover:border-google-groups; }
+    .btn-dockerhub { @apply bg-dockerhub/10 border-dockerhub/40 hover:bg-dockerhub/20 hover:border-dockerhub; }
+}

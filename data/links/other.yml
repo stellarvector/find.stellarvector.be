@@ -9,7 +9,7 @@
   icon: images/icons/dockerhub.png
   icon_alt: DockerHub Logo
 - name: Electronic mail
-  url: "mailto:team@stellarvector.be"
+  url: "mailto:hey@stellarvector.be"
   button: sv
   icon: images/icons/generic-email-alt.svg
   icon_alt: Email Icon
