@@ -1,19 +1,23 @@
 - name: Visit our Blog
-  url: https://blog.stellarvector.be/
+  eventid: blog
+  url: https://blog.stellarvector.be/?utm_source=find.stellarvector.be
   button: sv
   icon: https://www.stellarvector.be/assets/logo/star.png
   icon_alt: Stellar Vector Logo
 - name: Play Stellar Vector
-  url: https://play.stellarvector.be/
+  eventid: play
+  url: https://play.stellarvector.be/?utm_source=find.stellarvector.be
   button: sv
   icon: https://www.stellarvector.be/assets/logo/star.png
   icon_alt: Stellar Vector Logo
 - name: CTFTime
+  eventid: ctftime
   url: https://www.ctftime.org/team/192988
   button: sv
   icon: images/icons/ctftime.png
   icon_alt: CTFTime Logo
 - name: Hack The Box
+  eventid: htb-team
   url: https://app.hackthebox.com/teams/4886
   button: htb
   icon: images/icons/htb.svg

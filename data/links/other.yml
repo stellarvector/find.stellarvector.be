@@ -1,19 +1,23 @@
 - name: Github
+  eventid: github
   url: https://github.com/stellarvector
   button: github
   icon: images/icons/github.svg
   icon_alt: GitHub Logo
 - name: Dockerhub
+  eventid: dockerhub
   url: https://hub.docker.com/u/stellarvector
   button: dockerhub
   icon: images/icons/dockerhub.png
   icon_alt: DockerHub Logo
 - name: Electronic mail
+  eventid: email
   url: "mailto:hey@stellarvector.be"
   button: sv
   icon: images/icons/generic-email-alt.svg
   icon_alt: Email Icon
 - name: Route to our HQ
+  eventid: google-maps-directions
   url: https://www.google.com/maps/dir//Celestijnenlaan+200A,+Leuven/@50.8642433,4.6375575,13z/data=!4m8!4m7!1m0!1m5!1m1!1s0x47c16110fdaa4483:0xa0e21d4a20cbf0db!2m2!1d4.6787569!2d50.8641964
   button: sv
   icon: images/icons/generic-map.svg

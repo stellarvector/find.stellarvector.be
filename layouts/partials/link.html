@@ -1,7 +1,8 @@
 {{ $c := .button | default "sv" }}
 
 <a class="btn-base btn-{{ $c }} group"
-    href="{{ .url }}" rel="noopener" role="button">
+    href="{{ .url }}" rel="noopener" role="button"
+    data-umami-event="click: {{ .eventid }}">
     {{ if .icon }}
         <img class="h-6 w-auto transition-transform duration-100 group-hover:scale-120"
             aria-hidden="true" src="{{ .icon | relURL }}" alt="{{ .icon_alt }}">
