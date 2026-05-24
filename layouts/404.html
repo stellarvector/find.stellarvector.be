@@ -15,7 +15,15 @@
     <link rel="stylesheet" href="{{ $css.RelPermalink }}">
     <link rel="icon" type="image/png" href="https://www.stellarvector.be/assets/logo/favicon.ico">
 
-    <script defer src="https://go.stellarvector.be/go.js" data-website-id="4ab8dbef-be4f-4037-9a60-5c8d7952861a" data-tag="404"></script>
+    <script defer src="https://go.stellarvector.be/go.js" data-website-id="4ab8dbef-be4f-4037-9a60-5c8d7952861a" data-domains="find.stellarvector.be" data-tag="404"></script>
+    <script>
+        function toggleTheme() {
+            let nextTheme = document.documentElement.classList.contains('light') ? 'dark' : 'light';
+            localStorage.setItem('theme', nextTheme);
+            document.documentElement.classList.toggle('light');
+        }
+        if(localStorage.getItem('theme') == 'light'){toggleTheme()}
+    </script>
 </head>
 <body class="antialiased flex items-center justify-center min-h-screen">
     <div class="text-center">
