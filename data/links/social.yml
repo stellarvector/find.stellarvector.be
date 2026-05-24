@@ -8,7 +8,7 @@
   eventid: linkedin
   url: https://www.linkedin.com/company/stellarvector
   button: linked
-  icon: images/icons/linkedin.svg
+  icon: images/icons/linkedin.png
   icon_alt: LinkedIn Logo
 - name: Instagram
   eventid: instagram
@@ -20,5 +20,5 @@
   eventid: facebook
   url: https://www.facebook.com/stellarvector.be/
   button: faceb
-  icon: images/icons/facebook.svg
+  icon: images/icons/facebook.png
   icon_alt: Facebook Logo
