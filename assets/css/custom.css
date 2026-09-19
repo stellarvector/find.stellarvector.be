@@ -13,21 +13,96 @@
     --color-dockerhub: #2496ED;
 }
 
-@layer utility {
-    .btn-base {
-        @apply flex items-center justify-center gap-3 uppercase py-3 px-6 rounded-md text-sm font-bold w-full max-w-xs mx-auto transition-all duration-300 border text-body hover:shadow-lg;
-        @apply no-underline;
+@layer base {
+    /* No 300ms tap delay, no grey flash, no rubber-band scroll chaining on mobile. */
+    html {
+        -webkit-tap-highlight-color: transparent;
+        overscroll-behavior-y: none;
     }
 
-    .btn-sv { @apply bg-card border-accent-tint hover:bg-accent-tint hover:border-accent; }
-    .btn-discord { @apply bg-discord/10 border-discord/40 hover:bg-discord/20 hover:border-discord; }
-    .btn-faceb { @apply bg-faceb/10 border-faceb/40 hover:bg-faceb/20 hover:border-faceb; }
-    .btn-github { @apply bg-github/10 border-github/40 hover:bg-github/20 hover:border-github light:bg-gray-200 light:hover:bg-gray-300 light:border-gray-400 light:hover:border-gray-500; }
-    .btn-instagram { @apply bg-instagram/10 border-instagram/40 hover:bg-instagram/20 hover:border-instagram; }
-    .btn-linked { @apply bg-linked/10 border-linked/40 hover:bg-linked/20 hover:border-linked; }
-    .btn-x { @apply bg-x/10 light:bg-gray-200 border-x/40 light:border-gray-400 hover:bg-x/20 light:hover:border-gray-500 hover:border-x light:hover:bg-gray-300; }
-    .btn-yt { @apply bg-yt/10 border-yt/40 hover:bg-yt/20 hover:border-yt; }
-    .btn-htb { @apply bg-htb/10 border-htb/40 hover:bg-htb/20 hover:border-htb; }
-    .btn-google-groups { @apply bg-google-groups/10 border-google-groups/40 hover:bg-google-groups/20 hover:border-google-groups; }
-    .btn-dockerhub { @apply bg-dockerhub/10 border-dockerhub/40 hover:bg-dockerhub/20 hover:border-dockerhub; }
+    a, button {
+        touch-action: manipulation;
+    }
+}
+
+@layer utility {
+    /*
+     * Link-tree button. Minimum 48px tall so every row clears the Android touch
+     * target floor; the label carries the terminal voice (mono, tracked out).
+     */
+    /*
+     * Link-tree button. Minimum 48px tall so every row clears the Android touch
+     * target floor; the label carries the terminal voice (mono, tracked out).
+     *
+     * Every button is opaque: the brand colour is mixed INTO the card surface
+     * rather than laid over it at low alpha, so rows never show the page
+     * background (or the grid backdrop) through the fill.
+     */
+    .btn-base {
+        @apply flex w-full items-center gap-3 min-h-12 py-3 px-4 rounded-md border
+               font-mono text-xs sm:text-sm font-bold uppercase tracking-wide
+               text-body no-underline
+               transition-[background-color,border-color,box-shadow,transform] duration-200
+               hover:shadow-lg active:scale-[0.99];
+
+        --btn-tone: var(--color-accent);
+        background-color: color-mix(in oklab, var(--btn-tone) 12%, var(--color-card));
+        border-color: color-mix(in oklab, var(--btn-tone) 45%, var(--color-card));
+    }
+
+    .btn-base:hover {
+        background-color: color-mix(in oklab, var(--btn-tone) 24%, var(--color-card));
+        border-color: var(--btn-tone);
+    }
+
+    .btn-label {
+        @apply min-w-0 flex-1 text-left leading-tight text-pretty;
+    }
+
+    /* One tone per destination; the mix above turns it into an opaque surface. */
+    .btn-sv { --btn-tone: var(--color-accent); }
+    .btn-discord { --btn-tone: var(--color-discord); }
+    .btn-faceb { --btn-tone: var(--color-faceb); }
+    .btn-github { --btn-tone: var(--color-github); }
+    .btn-instagram { --btn-tone: var(--color-instagram); }
+    .btn-linked { --btn-tone: var(--color-linked); }
+    .btn-x { --btn-tone: var(--color-x); }
+    .btn-yt { --btn-tone: var(--color-yt); }
+    .btn-htb { --btn-tone: var(--color-htb); }
+    .btn-google-groups { --btn-tone: var(--color-google-groups); }
+    .btn-dockerhub { --btn-tone: var(--color-dockerhub); }
+
+    /* White brands are invisible on a light card: swap to their dark marks. */
+    :where(.light) .btn-github { --btn-tone: #24292f; }
+    :where(.light) .btn-x { --btn-tone: #0f0f0f; }
+
+    /* Keep fixed chrome above the iOS home indicator and Android gesture bar. */
+    .sv-safe-bottom {
+        bottom: calc(1rem + env(safe-area-inset-bottom));
+    }
+
+    @media (min-width: 48rem) {
+        .sv-safe-bottom {
+            bottom: calc(2rem + env(safe-area-inset-bottom));
+        }
+    }
+
+    /* Staggered entrance. Delays are set inline per item; motion-safe only. */
+    .sv-reveal {
+        animation: sv-reveal 450ms cubic-bezier(0.2, 0.7, 0.3, 1) backwards;
+    }
+
+    @keyframes sv-reveal {
+        from { opacity: 0; transform: translateY(10px); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .sv-reveal { animation: none; }
+    }
+
+    /* The grid backdrop is atmosphere, not content: fade it out at the edges. */
+    .sv-grid-fade {
+        -webkit-mask-image: radial-gradient(ellipse 70% 45% at 50% 0%, #000 0%, transparent 75%);
+        mask-image: radial-gradient(ellipse 70% 45% at 50% 0%, #000 0%, transparent 75%);
+    }
 }

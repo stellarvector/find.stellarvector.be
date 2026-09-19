@@ -1,0 +1,25 @@
+{{- /* Fixed theme switch. Sits clear of the iOS home indicator via safe-area insets. */ -}}
+<div class="sv-safe-bottom fixed right-4 md:right-8 z-1000 print:hidden">
+    <button type="button" data-theme-toggle aria-pressed="false"
+        aria-label="Switch between dark and light theme" title="Switch theme"
+        class="grid size-12 place-items-center rounded-full bg-card/90 backdrop-blur border border-line-strong
+               text-muted shadow-lg cursor-pointer
+               hover:text-body hover:border-accent hover:bg-accent-tint
+               transition-[color,background-color,border-color,transform] duration-200 hover:scale-105 active:scale-95"
+        onclick="toggleTheme()">
+        <svg class="size-6 block light:hidden" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
+        </svg>
+        <svg class="size-6 hidden light:block" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" />
+        </svg>
+    </button>
+</div>
+<script>
+    (function () {
+        var light = document.documentElement.classList.contains('light');
+        document.querySelectorAll('[data-theme-toggle]').forEach(function (btn) {
+            btn.setAttribute('aria-pressed', light ? 'true' : 'false');
+        });
+    })();
+</script>

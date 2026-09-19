@@ -4,7 +4,7 @@
   button: sv
   icon: https://www.stellarvector.be/assets/logo/star.png
   icon_alt: Stellar Vector Logo
-- name: Join our Discord server!
+- name: Join our Discord
   eventid: discord-invite
   url: https://discord.gg/tbP75TNfNR
   button: discord

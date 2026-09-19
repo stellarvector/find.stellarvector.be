@@ -19,3 +19,9 @@ module:
 taxonomies:
   category: ""
   tag: ""
+
+security:
+  exec:
+    # Hugo dropped tailwindcss from the default exec allowlist after 0.161.x;
+    # the theme's CSS pipeline needs it, so allow it explicitly.
+    allow: ['^(dart-)?sass$', '^go$', '^git$', '^node$', '^postcss$', '^tailwindcss$']

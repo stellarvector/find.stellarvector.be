@@ -19,3 +19,6 @@ hugo server -D --disableFastRender
 ```
 
 The site is available on port 1313.
+
+Tailwind runs as an external binary from the Hugo pipeline, so `npm install` must have
+been run at least once and `security.exec.allow` in `hugo.yml` must list `tailwindcss`.
