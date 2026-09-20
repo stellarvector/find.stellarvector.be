@@ -1,14 +1,2 @@
-github.com/stellarvector/theme v0.0.0-20260520120731-7df1750d5a1c h1:QVJN6ipFR891nuwtGNLxqGYYY3GQ2PH/7qDN0twHCe0=
-github.com/stellarvector/theme v0.0.0-20260520120731-7df1750d5a1c/go.mod h1:Mb4BsJKgf5WbiKJvfpNGE7Ycww4Uo+98U2R+sSM+wmI=
-github.com/stellarvector/theme v0.0.0-20260523024305-b8302d2c38be h1:dif2tExww9WGib8P7H4Z8G0A0cRuHE44OVTZmryuHdw=
-github.com/stellarvector/theme v0.0.0-20260523024305-b8302d2c38be/go.mod h1:Mb4BsJKgf5WbiKJvfpNGE7Ycww4Uo+98U2R+sSM+wmI=
-github.com/stellarvector/theme v0.0.0-20260523202058-f6980e2eca27 h1:LBUxLBkRMHbU+iy749CsAFDgHZKypVXXg/zaIB/tW40=
-github.com/stellarvector/theme v0.0.0-20260523202058-f6980e2eca27/go.mod h1:Mb4BsJKgf5WbiKJvfpNGE7Ycww4Uo+98U2R+sSM+wmI=
-github.com/stellarvector/theme v0.0.0-20260523204538-46d075f68db6 h1:dvr1cKcOrMOrCqxwWlwNVRJGwD3oR1b9pDEjNYOoP0E=
-github.com/stellarvector/theme v0.0.0-20260523204538-46d075f68db6/go.mod h1:Mb4BsJKgf5WbiKJvfpNGE7Ycww4Uo+98U2R+sSM+wmI=
-github.com/stellarvector/theme v0.0.0-20260523214520-d9febe8b03c7 h1:8mbhotn90c3zNxfy+KRyfmeDMeiqCNi/DSD3vnrWFEQ=
-github.com/stellarvector/theme v0.0.0-20260523214520-d9febe8b03c7/go.mod h1:Mb4BsJKgf5WbiKJvfpNGE7Ycww4Uo+98U2R+sSM+wmI=
-github.com/stellarvector/theme v0.0.0-20260601214816-33a8acc737a3 h1:vsS47nemrQ5TE+qN/QmOVyVhQaVbh0sa0jGklAxmJPA=
-github.com/stellarvector/theme v0.0.0-20260601214816-33a8acc737a3/go.mod h1:Mb4BsJKgf5WbiKJvfpNGE7Ycww4Uo+98U2R+sSM+wmI=
-github.com/stellarvector/theme v0.0.0-20260919022800-9bf7bbe85f22 h1:x7bnyTXPVwuNeHp/KD/asvu0sVZXwOsE9BUbobk7mlU=
-github.com/stellarvector/theme v0.0.0-20260919022800-9bf7bbe85f22/go.mod h1:Mb4BsJKgf5WbiKJvfpNGE7Ycww4Uo+98U2R+sSM+wmI=
+github.com/stellarvector/theme v0.0.0-20260919141347-51b5e7388f67 h1:Kk/vsvNJn4/sTKnhSXJzM/ymhAzrQkTKqf9ASGOqj3c=
+github.com/stellarvector/theme v0.0.0-20260919141347-51b5e7388f67/go.mod h1:Mb4BsJKgf5WbiKJvfpNGE7Ycww4Uo+98U2R+sSM+wmI=
