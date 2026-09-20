@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="{{ site.Language.Locale }}"
+      data-theme-light="{{ site.Params.theme_color_light }}"
+      data-theme-dark="{{ site.Params.theme_color_dark }}">
+<head>
+    {{ partial "sv/head/meta.html" . }}
+    {{ partial "sv/head/js.html" . }}
+    {{ partial "sv/head/fonts.html" . }}
+    {{ partial "sv/head/css.html" . }}
+    {{ partial "sv/head/analytics.html" . }}
+    {{ block "head" . }}{{ end }}
+</head>
+<body class="antialiased min-h-dvh flex flex-col">
+    {{ partial "sv/skip-link.html" . }}
+    
+    {{ block "header" . }}{{ end }}
+    
+    <main id="content" tabindex="-1" class="flex-1 w-full">
+        {{ block "main" . }}{{ end }}
+    </main>
+
+    {{ block "footer" . }}
+        <footer class="mt-auto border-t border-line pt-8 pb-12 text-center text-sm text-muted">
+            <div class="mx-auto max-w-{{ site.Params.measure | default "2xl" }} px-4">
+                <p class="sv-label">powered by</p>
+                <p class="mt-2">
+                    the <a href="https://distrinet.cs.kuleuven.be" class="hover:text-link">DistriNet research group</a>
+                    and the <a href="https://kuleuven.be" class="hover:text-link">KU Leuven</a>.
+                </p>
+                <p class="mt-4 font-mono text-xs">
+                    &copy; {{ now.Year }} Stellar Vector
+                </p>
+            </div>
+        </footer>
+    {{ end }}
+
+    {{ block "body-end" . }}
+        {{ partial "sv/theme-toggle.html" (dict "variant" "floating") }}
+    {{ end }}
+</body>
+</html>

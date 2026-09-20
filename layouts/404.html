@@ -1,28 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-{{ partial "head.html" (dict "title" (printf "404 Page Not Found | %s" site.Title) "tag" "404") }}
-<body class="antialiased">
-    {{ partial "theme-toggle.html" . }}
+{{ define "main" }}
+<div class="sv-grid sv-grid-fade pointer-events-none fixed inset-x-0 top-0 h-96 opacity-60" aria-hidden="true"></div>
 
-    <div class="sv-grid sv-grid-fade pointer-events-none fixed inset-x-0 top-0 h-96 opacity-60" aria-hidden="true"></div>
+<div class="relative mx-auto flex min-h-[calc(100dvh-16rem)] w-full max-w-lg flex-col items-center justify-center px-4 py-12 text-center">
+    <p class="sv-label sv-prompt-root">curl -I {{ site.BaseURL }}&lt;unknown&gt;</p>
 
-    <main class="relative mx-auto flex min-h-dvh w-full max-w-lg flex-col items-center justify-center px-4 py-12 text-center">
-        <p class="sv-label sv-prompt-root">curl -I {{ site.BaseURL }}&lt;unknown&gt;</p>
-
-        <div class="sv-terminal sv-reveal mt-4 w-full text-left" data-title="HTTP/1.1 404">
-            <div>
-                <p class="m-0 text-error-text">&gt; resource not found</p>
-                <p class="m-0 mt-2 text-muted">&gt; the link you followed does not exist here.</p>
-                <p class="m-0 mt-2 text-terminal">&gt; try one of the known good routes<span class="sv-caret" aria-hidden="true"></span></p>
-            </div>
+    <div class="sv-terminal sv-reveal mt-4 w-full text-left" data-title="HTTP/1.1 404">
+        <div>
+            <p class="m-0 text-error-text">&gt; resource not found</p>
+            <p class="m-0 mt-2 text-muted">&gt; the link you followed does not exist here.</p>
+            <p class="m-0 mt-2 text-terminal">&gt; try one of the known good routes<span class="sv-caret" aria-hidden="true"></span></p>
         </div>
+    </div>
 
-        <h1 class="mt-8 mb-0 sv-glitch" data-text="404">404</h1>
-        <p class="mt-2 text-muted">page not found</p>
+    <h1 class="mt-8 mb-0 sv-glitch" data-text="404">404</h1>
+    <p class="mt-2 text-muted">page not found</p>
 
-        <a href="/" data-umami-event="click: 404-to-home" class="btn-base btn-sv group mt-8 max-w-xs justify-center">
-            <span class="btn-label text-center">Find Stellar Vector</span>
-        </a>
-    </main>
-</body>
-</html>
+    <a href="/" data-umami-event="click: 404-to-home" class="btn-base btn-sv group mt-8 max-w-xs justify-center">
+        <span class="btn-label text-center">Find Stellar Vector</span>
+    </a>
+</div>
+{{ end }}

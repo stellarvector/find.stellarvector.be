@@ -1,3 +1,4 @@
+{{ define "main" }}
 {{- $groups := slice
     (dict "label" "general" "links" hugo.Data.links.general "feature" true)
     (dict "label" "hacking" "links" hugo.Data.links.hacking "feature" false)
@@ -6,65 +7,47 @@
 -}}
 {{- $total := 0 -}}
 {{- range $groups -}}{{ $total = add $total (len .links) }}{{- end -}}
-<!DOCTYPE html>
-<html lang="en">
-{{ partial "head.html" (dict "title" site.Title "tag" "homepage") }}
-<body class="antialiased min-h-dvh">
-    <a href="#links" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-1001
-              focus:rounded-md focus:border focus:border-accent focus:bg-card focus:px-4 focus:py-2
-              focus:font-mono focus:text-xs focus:uppercase focus:tracking-[0.2em] focus:text-body">
-        Skip to links
-    </a>
 
-    {{ partial "theme-toggle.html" . }}
+{{- /* Forced tailwind scanning for dynamic classes.
+    h-28 sm:h-36
+*/ -}}
 
-    {{- /* Faint coordinate grid behind the hero. Decorative, never interactive. */}}
-    <div class="sv-grid sv-grid-fade pointer-events-none fixed inset-x-0 top-0 h-96 opacity-60" aria-hidden="true"></div>
+{{- /* Faint coordinate grid behind the hero. Decorative, never interactive. */}}
+<div class="sv-grid sv-grid-fade pointer-events-none fixed inset-x-0 top-0 h-96 opacity-60" aria-hidden="true"></div>
 
-    <div class="relative mx-auto w-full max-w-2xl px-4 pt-10 pb-10 sm:px-6 sm:pt-14 md:pb-16">
-        <header class="text-center">
-            <a class="inline-block no-underline" href="https://stellarvector.be?utm_source=find.stellarvector.be&utm_content=logo" data-umami-event="click: logo-to-site">
-                <img src="https://stellarvector.be/assets/logo/logo-dark.png" width="288" height="144"
-                    class="light:hidden block mx-auto h-24 sm:h-32 w-auto object-contain transition-transform duration-300 hover:scale-105"
-                    alt="Stellar Vector">
-                <img src="https://stellarvector.be/assets/logo/logo-light.png" width="288" height="144"
-                    class="light:block hidden mx-auto h-24 sm:h-32 w-auto object-contain transition-transform duration-300 hover:scale-105"
-                    alt="Stellar Vector">
-            </a>
+<div class="relative mx-auto w-full max-w-{{ site.Params.measure | default "2xl" }} px-4 pt-10 pb-10 sm:px-6 sm:pt-14 md:pb-16">
+    <header class="text-center">
+        <div class="flex flex-col items-center">
+            {{ partial "sv/logo.html" (dict "img_class" "h-28 sm:h-36") }}
+            
+            <div class="mt-4">
+                {{ partial "sv/host-chip.html" . }}
+            </div>
+        </div>
 
-            <p class="sv-label sv-prompt mt-6 normal-case text-sm sm:text-base tracking-[0.15em]">which stellarvector</p>
+        <div class="mt-8">
+            <p class="sv-label sv-prompt normal-case text-sm sm:text-base tracking-[0.15em]">which stellarvector</p>
+        </div>
 
-            <h1 class="sv-glitch mt-2 mb-0" data-text="{{ site.Title }}">{{ site.Title }}</h1>
+        <h1 class="sv-glitch sv-glitch-auto mt-2 mb-0 inline-block" data-text="{{ site.Title }}">{{ site.Title }}</h1>
 
-            <p class="mt-4 text-sm sm:text-base text-muted text-balance">
-                Found in {{ $total }} location{{ if ne $total 1 }}s{{ end }}. Pick one.<span class="sv-caret text-terminal" aria-hidden="true"></span>
-            </p>
-        </header>
+        <p class="mt-4 text-sm sm:text-base text-muted text-balance">
+            Found in {{ $total }} location{{ if ne $total 1 }}s{{ end }}. Pick one.<span class="sv-caret text-terminal" aria-hidden="true"></span>
+        </p>
+    </header>
 
-        <main id="links" class="mt-12 space-y-10 scroll-mt-4">
-            {{- range $s, $group := $groups }}
-                <section class="space-y-5">
-                    {{ partial "section.html" (dict "label" $group.label) }}
-                    <div class="grid gap-3 sm:grid-cols-2">
-                        {{- range $i, $link := $group.links }}
-                            {{- $delay := add (mul $s 60) (mul $i 40) -}}
-                            {{ partial "link.html" (merge $link (dict "delay" $delay "wide" (and $group.feature (eq $i 0)))) }}
-                        {{- end }}
-                    </div>
-                </section>
-            {{- end }}
-        </main>
-
-        <footer class="mt-12 border-t border-line pt-6 text-center text-sm text-muted">
-            <p class="sv-label">powered by</p>
-            <p class="mt-2">
-                the <a href="https://distrinet.cs.kuleuven.be" data-umami-event="click: distrinet">DistriNet research group</a>
-                and the <a href="https://kuleuven.be" data-umami-event="click: kuleuven">KU Leuven</a>.
-            </p>
-            <p class="mt-4 font-mono">
-                <a href="https://stellarvector.be/?utm_source=find.stellarvector.be&utm_content=footer-link" data-umami-event="click: footer-to-site">stellarvector.be</a>
-            </p>
-        </footer>
+    <div id="links" class="mt-12 space-y-10 scroll-mt-4">
+        {{- range $s, $group := $groups }}
+            <section class="space-y-5">
+                {{ partial "section.html" (dict "label" $group.label) }}
+                <div class="grid gap-3 sm:grid-cols-2">
+                    {{- range $i, $link := $group.links }}
+                        {{- $delay := add (mul $s 60) (mul $i 40) -}}
+                        {{ partial "link.html" (merge $link (dict "delay" $delay "wide" (and $group.feature (eq $i 0)))) }}
+                    {{- end }}
+                </div>
+            </section>
+        {{- end }}
     </div>
-</body>
-</html>
+</div>
+{{ end }}

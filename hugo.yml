@@ -3,8 +3,15 @@ defaultContentLanguage: en
 title: Find Stellar Vector
 
 params:
+  host: "find"
+  measure: "2xl"
   description: You can find Stellar Vector on Social Media and on our own self-hosted systems. Follow the links on this page to get there!
   email: team@stellarvector.be
+  analytics:
+    website_id: "4ab8dbef-be4f-4037-9a60-5c8d7952861a"
+    domains: "find.stellarvector.be"
+  css:
+    extra: ["css/custom.css"]
 
 build:
   buildStats:

@@ -5,14 +5,13 @@
     href="{{ .url }}" rel="noopener"
     style="animation-delay: {{ $delay }}ms"
     data-umami-event="click: {{ .eventid }}">
-    {{ if .icon }}
+    {{ if .icon_url }}
         <img class="size-6 shrink-0 object-contain transition-transform duration-200 group-hover:scale-115"
             aria-hidden="true" alt="" width="24" height="24" loading="lazy" decoding="async"
-            src="{{ .icon | relURL }}">
+            src="{{ .icon_url | relURL }}">
+    {{ else if .icon }}
+        {{ partial "sv/icon" (dict "name" .icon "class" "size-6 shrink-0 transition-transform duration-200 group-hover:scale-115") }}
     {{ end }}
     <span class="btn-label">{{ .name }}</span>
-    <svg class="size-4 shrink-0 text-muted transition-transform duration-200 group-hover:translate-x-1 group-hover:text-body"
-        aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-    </svg>
+    {{ partial "sv/icon" (dict "name" "arrow" "class" "size-4 shrink-0 text-muted transition-transform duration-200 group-hover:translate-x-1 group-hover:text-body") }}
 </a>

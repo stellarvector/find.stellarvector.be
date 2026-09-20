@@ -2,23 +2,23 @@
   eventid: x-formerly-twitter
   url: https://x.com/stellar_vector
   button: x
-  icon: images/icons/x.svg
+  icon: x
   icon_alt: X Logo
 - name: LinkedIn
   eventid: linkedin
   url: https://www.linkedin.com/company/stellarvector
   button: linked
-  icon: images/icons/linkedin.png
+  icon: linkedin
   icon_alt: LinkedIn Logo
 - name: Instagram
   eventid: instagram
   url: https://www.instagram.com/stellar.vector/
   button: instagram
-  icon: images/icons/instagram.svg
+  icon: instagram
   icon_alt: Instagram Logo
 - name: Facebook
   eventid: facebook
   url: https://www.facebook.com/stellarvector.be/
   button: faceb
-  icon: images/icons/facebook.png
+  icon: facebook
   icon_alt: Facebook Logo
