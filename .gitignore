@@ -1,4 +1,6 @@
 public/
-hugo_stats.json
+resources/
 .hugo_build.lock
-node_modules
+hugo_stats.json
+.DS_Store
+node_modules/

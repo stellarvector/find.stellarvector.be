@@ -1,24 +1,22 @@
 # find.stellarvector.be
 
-This is the link-tree for Stellar Vector.
+The link hub for Stellar Vector.
 
-## Pull the latest hugo modules (theme)
+Chrome, tokens and shared components come from `github.com/stellarvector/theme`; read its README before adding a component here.
 
-```bash
-hugo mod get -u
-```
+## Running locally
 
-Commit changes to `go.mod` and `go.sum` in your next PR.
+1. Install Hugo (extended version, >= 0.165.0) and Node.js.
+2. Run `npm ci` to install dependencies.
+3. Run `hugo server`.
+4. Go to http://localhost:1313/
 
-## Development
+The theme is pulled in as a Hugo module. Run `hugo mod get -u github.com/stellarvector/theme` to update it.
 
-From the root directory, run:
+## Ownership
 
-```bash
-hugo server -D --disableFastRender
-```
-
-The site is available on port 1313.
-
-Tailwind runs as an external binary from the Hugo pipeline, so `npm install` must have
-been run at least once and `security.exec.allow` in `hugo.yml` must list `tailwindcss`.
+| Concern | Source of truth |
+|---|---|
+| Links data (`data/links/`) | This repository |
+| Reveal animations and brand tones | This repository |
+| Chrome, tokens, and base behavior | Shared Hugo module |
